@@ -1,0 +1,72 @@
+{
+ "version": "v1.0",
+ "date": "2026-11-13",
+ "game": "Helix Fear Effect (Japan) / SLPS-03340~03343 / PS1 (CD 4장, 디스크마다 BIN/CUE 1트랙)",
+ "xdelta_options": "xdelta3 -e -0 -S none -A (no compression, no secondary compression, no application header)",
+ "discs": [
+  {
+   "disc": 1,
+   "game_id": "SLPS-03340",
+   "source_bin_name": "Helix - Fear Effect (Japan) (Disc 1).bin",
+   "asset": "Fear_Effect_PS1_KO_v1.0_Disc1.xdelta",
+   "asset_size": 74101126,
+   "asset_sha256": "cfa57022d1fc57af93ae373ad80ed1d4df69eb56fc7e1910bd56998fef273282",
+   "source_bin_size": 724688832,
+   "source_bin_md5": "c474444af100c827f91daa4bc9ac0765",
+   "source_bin_sha1": "5cce5c3be6231b8ce498b5fee4233c4b48b57115",
+   "source_bin_sha256": "4190633c7eadcb4422f59c5a33ede97b7c0d64efae2c1bb85413f61ed536065a",
+   "output_bin_size": 724688832,
+   "output_bin_md5": "615d4ebda6177311b890515703f60025",
+   "output_bin_sha1": "7628866fd46f725dfffb5f7030554aeb5fda886c",
+   "output_bin_sha256": "f541d13d1781e8113036215b4606f3644479ac9be3d4e20436a9ff15d09fda1d"
+  },
+  {
+   "disc": 2,
+   "game_id": "SLPS-03341",
+   "source_bin_name": "Helix - Fear Effect (Japan) (Disc 2).bin",
+   "asset": "Fear_Effect_PS1_KO_v1.0_Disc2.xdelta",
+   "asset_size": 104164230,
+   "asset_sha256": "146ccfed94e88967e1245a627e9c43b872d82cfae0b05c31aec3143e93550d00",
+   "source_bin_size": 729658608,
+   "source_bin_md5": "e34d9ba40a03555410871d3ce18a5b93",
+   "source_bin_sha1": "ca4708b919e558d7ccb53e17a797435479847379",
+   "source_bin_sha256": "bd3cf66d4879f7a851921f5f62022999fafd75678fe02dec35db203607d02e06",
+   "output_bin_size": 729658608,
+   "output_bin_md5": "06ce86368452c8a96e454c028857c1a1",
+   "output_bin_sha1": "7fc69ddb2be9cceca8005668ed1488b3d3631fe5",
+   "output_bin_sha256": "3da2ee973c1f327620983945600801218f45232c8ff3036fce33e5fa321b063c"
+  },
+  {
+   "disc": 3,
+   "game_id": "SLPS-03342",
+   "source_bin_name": "Helix - Fear Effect (Japan) (Disc 3).bin",
+   "asset": "Fear_Effect_PS1_KO_v1.0_Disc3.xdelta",
+   "asset_size": 79403532,
+   "asset_sha256": "a71d37089d1e36ca4f4cb33b72deba0c1ff380cb9efbd22fe4dbfd25c44b6de6",
+   "source_bin_size": 674483040,
+   "source_bin_md5": "7d3a4b25502bd6650075a91c034111c5",
+   "source_bin_sha1": "a1bb6e06535b28c0daf3caef259cff3e587886ef",
+   "source_bin_sha256": "ee0e41d379e2776e57c08d7bd749fc174adcef00847e77d3e08ee984a8c06182",
+   "output_bin_size": 674483040,
+   "output_bin_md5": "635a3774112af731349b9d82eaff154d",
+   "output_bin_sha1": "66eac7c95fecdf16fc51eb6d18d1fd144f88f59d",
+   "output_bin_sha256": "95b36a78ac6faa060e95ac774b344a750a374ec7b96b997b1de8c79c59f63ca9"
+  },
+  {
+   "disc": 4,
+   "game_id": "SLPS-03343",
+   "source_bin_name": "Helix - Fear Effect (Japan) (Disc 4).bin",
+   "asset": "Fear_Effect_PS1_KO_v1.0_Disc4.xdelta",
+   "asset_size": 62187369,
+   "asset_sha256": "29b5f731c339698a5233ab42563e2e959fd8cdf1e3e482ae73e425f509a9a27c",
+   "source_bin_size": 749523600,
+   "source_bin_md5": "3fd8dec53c2f6c0c47be76ec0c97e621",
+   "source_bin_sha1": "06650e1e37f8b0e80e6cd79c2abbe65a42edc9e8",
+   "source_bin_sha256": "5c20077da5fc612352c6568ef884bd1fa39d01b7df302f6ff27f3d3052753440",
+   "output_bin_size": 749523600,
+   "output_bin_md5": "fc2ecc6842867356c70a402db60f8289",
+   "output_bin_sha1": "ae5d47e2b6e411a5132934620208858efe8e2dfa",
+   "output_bin_sha256": "f1efb694a5500080f2ca9816afc7a239bb527bc1a01410cb40995c654e69b9eb"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+"""릴리즈 xdelta 를 해시 검사 후 적용 (디스크 1장씩).
+사용: python tools/apply_release.py --disc 1 --xdelta xdelta3.exe --source "Helix - Fear Effect (Japan) (Disc 1).bin" --patch Fear_Effect_PS1_KO_v1.0_Disc1.xdelta --output "Fear Effect (Korean) (Disc 1).bin"
+결과 BIN 옆에 같은 이름의 CUE 를 만듭니다.
+"""
+import argparse, hashlib, json, os, subprocess, sys
+
+MAN = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'release_manifest.json'), encoding='utf-8'))
+
+
+def sha256(p):
+    h = hashlib.sha256()
+    with open(p, 'rb') as f:
+        for b in iter(lambda: f.read(1 << 22), b''):
+            h.update(b)
+    return h.hexdigest()
+
+
+def check(p, size, digest, what):
+    if os.path.getsize(p) != size:
+        sys.exit('%s 크기 불일치: %d (기대 %d)' % (what, os.path.getsize(p), size))
+    print(what, '해시 확인 중...', flush=True)
+    if sha256(p) != digest:
+        sys.exit('%s SHA-256 불일치' % what)
+
+
+a = argparse.ArgumentParser()
+a.add_argument('--disc', type=int, required=True, choices=[1, 2, 3, 4])
+a.add_argument('--xdelta', default='xdelta3')
+a.add_argument('--source', required=True)
+a.add_argument('--patch', required=True)
+a.add_argument('--output', required=True)
+o = a.parse_args()
+M = [d for d in MAN['discs'] if d['disc'] == o.disc][0]
+if os.path.exists(o.output):
+    sys.exit('출력 파일이 이미 있습니다: ' + o.output)
+check(o.source, M['source_bin_size'], M['source_bin_sha256'], '원본 BIN')
+check(o.patch, M['asset_size'], M['asset_sha256'], 'xdelta')
+subprocess.run([o.xdelta, '-d', '-s', o.source, o.patch, o.output], check=True)
+check(o.output, M['output_bin_size'], M['output_bin_sha256'], '결과 BIN')
+cue = os.path.splitext(os.path.abspath(o.output))[0] + '.cue'
+if not os.path.exists(cue):
+    open(cue, 'w', encoding='utf-8').write(
+        'FILE "%s" BINARY\n  TRACK 01 MODE2/2352\n    INDEX 01 00:00:00\n' % os.path.basename(o.output))
+    print('CUE 생성:', cue)
+print('완료:', o.output)

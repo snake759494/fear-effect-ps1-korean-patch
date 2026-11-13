@@ -1,0 +1,13 @@
+GSHELL.OVR	0x4	로드에 실패했습니다
+GSHELL.OVR	0x10	하드
+GSHELL.OVR	0x14	노멀
+GSHELL.OVR	0x1c	로드 중입니다... 메모리 카드를 빼지 마십시오
+GSHELL.OVR	0x38	로드할 데이터를 선택하십시오
+GSHELL.OVR	0x4c	세이브 데이터가 없습니다
+GSHELL.OVR	0x5c	메모리 카드가 손상되었습니다
+GSHELL.OVR	0x6c	메모리 카드가 포맷되어 있지 않습니다
+GSHELL.OVR	0x84	메모리 카드가 꽂혀 있지 않습니다
+GSHELL.OVR	0x98	메모리 카드에 접근 중입니다... 메모리 카드를 빼지 마십시오
+GSHELL.OVR	0xc0	메모리 카드 확인 중입니다...
+SWAP.OVR	0x4	디스크 커버가 열려 있습니다
+SWAP.OVR	0x14	올바른 디스크를 넣어 주십시오
